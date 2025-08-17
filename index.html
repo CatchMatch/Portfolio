@@ -12,27 +12,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- ====== NAV ====== -->
     <nav class="nav">
       <div class="container nav-inner">
-        <div class="brand">
-          <span class="logo"></span> <span>Anandapriya M</span>
-        </div>
-        <div class="nav-links">
+        <a href="#" class="brand">Anandapriya M</a>
+
+        <!-- Hamburger for mobile -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- Links -->
+        <div class="nav-links" id="nav-links">
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
           <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
+          <a href="#certifications">Certifications</a>
           <a href="#contact">Contact</a>
         </div>
       </div>
@@ -40,7 +49,6 @@
 
     <!-- ====== HERO ====== -->
     <header class="hero">
-      <div class="grid"></div>
       <div class="container hero-inner">
         <div>
           <p class="kicker">Hello, I'm</p>
@@ -54,8 +62,8 @@
           </p>
           <div class="cta-row">
             <a class="btn btn-primary" href="#projects">See Projects ↗</a>
-            <a class="btn" href="Anandapriya resume.pdf" target="_blank">
-              Resume</a
+            <a class="btn" href="pdfs/Anandapriya resume.pdf" target="_blank"
+              >Resume</a
             >
           </div>
         </div>
@@ -63,14 +71,13 @@
           <div class="card">
             <div class="profile">
               <div class="pfp">
-                <img src="profile.jpg" alt="Anandapriya M" />
+                <img src="images/profile.jpg" alt="Anandapriya M" />
               </div>
               <div class="meta">
                 <span class="pill">Available for work</span>
                 <span class="pill">Remote & On-site</span>
               </div>
             </div>
-            <div class="sparkle" aria-hidden="true"></div>
           </div>
         </div>
       </div>
@@ -96,71 +103,61 @@
           <div class="skill">
             <h4><i class="devicon-html5-plain colored"></i> HTML & CSS</h4>
             <br />
-            <div class="bar" title="95%"><span style="--w: 95%"></span></div>
+            <div class="bar"><span style="--w: 95%"></span></div>
             <p class="muted">Responsive layouts, accessibility, animations.</p>
           </div>
-
           <div class="skill">
             <h4><i class="devicon-javascript-plain colored"></i> JavaScript</h4>
             <br />
-            <div class="bar" title="65%"><span style="--w: 65%"></span></div>
-            <p class="muted">Interactivity, Functions for API integration.</p>
+            <div class="bar"><span style="--w: 85%"></span></div>
+            <p class="muted">
+              ES6+, interactivity, DOM manipulation, API integration.
+            </p>
           </div>
-
           <div class="skill">
             <h4><i class="devicon-java-plain colored"></i> Java</h4>
             <br />
-            <div class="bar" title="75%"><span style="--w: 75%"></span></div>
-            <p class="muted">OOP concepts, basic Swing for UI apps.</p>
+            <div class="bar"><span style="--w: 75%"></span></div>
+            <p class="muted">Strong OOP concepts, Swing for UI apps.</p>
           </div>
-
           <div class="skill">
             <h4><i class="devicon-python-plain colored"></i> Python (Basic)</h4>
             <br />
-            <div class="bar" title="70%"><span style="--w: 70%"></span></div>
+            <div class="bar"><span style="--w: 70%"></span></div>
             <p class="muted">Used in Django projects for backend logic.</p>
           </div>
-
-          <div class="skill">
-            <h4><i class="devicon-c-plain colored"></i> C (Basic)</h4>
-            <br />
-            <div class="bar" title="50%"><span style="--w: 50%"></span></div>
-            <p class="muted">
-              Fundamental programming knowledge, loops, and structures.
-            </p>
-          </div>
-
           <div class="skill">
             <h4><i class="devicon-django-plain colored"></i> Django</h4>
             <br />
-            <div class="bar" title="75%"><span style="--w: 75%"></span></div>
+            <div class="bar"><span style="--w: 75%"></span></div>
             <p class="muted">Web frameworks, authentication, CRUD apps.</p>
           </div>
-
           <div class="skill">
-            <h4><i class="devicon-mysql-plain colored"></i> MySQL</h4><br>
-            <div class="bar" title="75%"><span style="--w: 75%"></span></div>
-            <p class="muted">Relational database management, queries, joins.</p>
+            <h4><i class="devicon-mysql-plain colored"></i> MySQL</h4>
+            <br />
+            <div class="bar"><span style="--w: 75%"></span></div>
+            <p class="muted">Database management, queries, joins.</p>
           </div>
-
           <div class="skill">
             <h4>
-              <i class="devicon-mongodb-plain colored"></i>
-              <i class="devicon-python-plain colored"></i> MongoDB with Python
+              <i class="devicon-mongodb-plain colored"></i> MongoDB (with
+              Python)
             </h4>
             <br />
-            <div class="bar" title="65%"><span style="--w: 65%"></span></div>
-            <p class="muted">
-              NoSQL database operations combined with Python backend.
-            </p>
+            <div class="bar"><span style="--w: 70%"></span></div>
+            <p class="muted">Worked with MongoDB + Python integration.</p>
           </div>
           <div class="skill">
             <h4><i class="devicon-mariadb-plain colored"></i> MariaDB</h4>
             <br />
-            <div class="bar" title="70%"><span style="--w: 70%"></span></div>
-            <p class="muted">
-              Experience with MariaDB via Infosys Springboard certification.
-            </p>
+            <div class="bar"><span style="--w: 70%"></span></div>
+            <p class="muted">Infosys Springboard certified.</p>
+          </div>
+          <div class="skill">
+            <h4><i class="devicon-c-plain colored"></i> C (Basic)</h4>
+            <br />
+            <div class="bar"><span style="--w: 60%"></span></div>
+            <p class="muted">Basic programming, arrays & functions.</p>
           </div>
         </div>
       </div>
@@ -172,7 +169,9 @@
         <h2 class="section-title">Projects</h2>
         <div class="grid-3">
           <article class="project">
-            <a href="https://anandapriya.pythonanywhere.com/"><img src="Lib.png" alt="Library Management System" /></a>
+            <a href="https://anandapriya.pythonanywhere.com/" target="_blank"
+              ><img src="images/Lib.png" alt="Library Management System"
+            /></a>
             <div class="p-body">
               <h3>Library Management System</h3>
               <p class="muted">
@@ -187,7 +186,9 @@
             </div>
           </article>
           <article class="project">
-            <a href="https://whiteking24.github.io/HydroHang/"><img src="Ecom.png" alt="E-Commerce Website" /></a>
+            <a href="https://whiteking24.github.io/HydroHang/" target="_blank"
+              ><img src="images/Ecom.png" alt="E-Commerce Website"
+            /></a>
             <div class="p-body">
               <h3>E-Commerce Website</h3>
               <p class="muted">
@@ -201,7 +202,11 @@
             </div>
           </article>
           <article class="project">
-            <a href="https://catchmatch.github.io/Connect-4-Offline-game/"><img src="Connect4.jpeg" alt="Tic Tac Toe Game" /></a>
+            <a
+              href="https://catchmatch.github.io/Connect-4-Offline-game/"
+              target="_blank"
+              ><img src="images/Connect4.jpeg" alt="Tic Tac Toe Game"
+            /></a>
             <div class="p-body">
               <h3>Connect-4-Offline-game</h3>
               <p class="muted">
@@ -275,29 +280,32 @@
         <h2 class="section-title">Certifications</h2>
         <div class="cert-grid">
           <div class="cert-card">
-            <a href="Programming In Java.pdf" target="_blank">
-              <img src="Java.png" alt="Java Certification" />
+            <a href="pdfs/Programming In Java.pdf" target="_blank">
+              <img src="images/Java.png" alt="Java Certification" />
             </a>
             <h4>Java Programming</h4>
             <p>NPTEL · Apr 2024</p>
           </div>
           <div class="cert-card">
-            <a href="Online HTML Courses.pdf" target="_blank">
-              <img src="Html.png" alt="HTML Certification" />
+            <a href="pdfs/Online HTML Courses.pdf" target="_blank">
+              <img src="images/Html.png" alt="HTML Certification" />
             </a>
             <h4>HTML</h4>
             <p>Infosys Springboard · Oct 2024</p>
           </div>
           <div class="cert-card">
-            <a href="Maria DB Course Beginer to Advanced.pdf" target="_blank">
-              <img src="Maria.png" alt="MariaDB Certification" />
+            <a
+              href="pdfs/Maria DB Course Beginer to Advanced.pdf"
+              target="_blank"
+            >
+              <img src="images/Maria.png" alt="MariaDB Certification" />
             </a>
             <h4>MariaDB</h4>
             <p>Infosys Springboard · Aug 2024</p>
           </div>
           <div class="cert-card">
-            <a href="Python with MongoDB.pdf" target="_blank">
-              <img src="MongoDB.png" alt="MongoDB Certification" />
+            <a href="pdfs/Python with MongoDB.pdf" target="_blank">
+              <img src="images/MongoDB.png" alt="MongoDB Certification" />
             </a>
             <h4>MongoDB with Python</h4>
             <p>Infosys Springboard · Aug 2025</p>
@@ -351,6 +359,7 @@
       </div>
     </section>
 
+    <!-- ====== FOOTER ====== -->
     <footer>
       <div class="container">
         <p>
@@ -361,9 +370,13 @@
     </footer>
 
     <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-      const bars = document.querySelectorAll(".bar > span");
-      bars.forEach((b, i) => (b.style.animationDelay = i * 0.15 + "s"));
+      const btn = document.getElementById("hamburger");
+      const menu = document.getElementById("nav-links");
+
+      btn.addEventListener("click", () => {
+        const open = menu.classList.toggle("active");
+        btn.classList.toggle("is-open", open);
+      });
     </script>
   </body>
 </html>
